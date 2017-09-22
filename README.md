@@ -50,18 +50,18 @@ will use default values.
 Both of these variable must be lists representing an hour in the 24h format `[HH,
 MM, SS]`
 
-    let g:dayTime = [8, 0, 0]           " Default 9:30:00 am
-    let g:nightTime = [19, 45, 0]       " Default 6:30:00 pm
+    let g:dayTime    = [8, 0, 0]    " Default 9:30:00 am
+    let g:nightTime  = [19, 45, 0]  " Default 6:30:00 pm
 
 ## Customize colorschemes
 
 `g:colorschemeDay` and `g:colorschemeNight` define the colorschemes to use by
 day and night
 
-    let g:colorschemeDay = 'desert'     " Default blue
-    let g:colorschemeNight = 'delek'    " Default darkblue
+    let g:colorschemeDay    = 'desert'  " Default blue
+    let g:colorschemeNight  = 'delek'   " Default darkblue
 
 # I found a bug!
 
-Don't hesitate to open an issue
+Feel free to open an issue
 [here](https://github.com/statox/colorscheme-changer.vim/issues)
