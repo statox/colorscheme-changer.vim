@@ -72,7 +72,7 @@ function! ScheduleNewColorscheme(timer)
     execute 'colorscheme ' . newColorscheme
 
     let currentDate = [strftime('%H'), strftime('%M'), strftime('%S')]
-    let startDelay = s:TimeDiff(currentDate, targetDate)
+    let startDelay = s:TimeDiff(currentDate, targetDate) + 2000
 
     " Create the trigger for the next change
     call timer_start(startDelay, 'ScheduleNewColorscheme', {}) 
