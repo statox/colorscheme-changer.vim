@@ -38,9 +38,9 @@ If the command fails, this plugin will also fail.
 
 # Configuration
 
-This plugin exposes four variables that use can use to customize it. You can
-define each of these variables in your `.vimrc`, if you don't the plugin will
-use default values.
+This plugin exposes four variables that can be used to customize its behavior.
+You can define each of these variables in your `.vimrc`, if you don't the plugin
+will use default values.
 
 ## Customize hours
 
