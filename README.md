@@ -55,11 +55,11 @@ MM, SS]`
 
 ## Customize colorschemes
 
-`g:colorschemeDay` and `g:colorschemeNight` define the colorschemes to use by
+`g:dayColorscheme` and `g:nightColorscheme` define the colorschemes to use by
 day and night
 
-    let g:colorschemeDay    = 'desert'  " Default blue
-    let g:colorschemeNight  = 'delek'   " Default darkblue
+    let g:dayColorscheme    = 'desert'  " Default blue
+    let g:nightColorscheme  = 'delek'   " Default darkblue
 
 # I found a bug!
 

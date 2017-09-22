@@ -16,15 +16,15 @@ if exists('g:nightTime')
 endif
 
 " Define the colorscheme used by day
-let s:colorschemeDay = 'blue'
-if exists('g:colorschemeDay')
-    let s:colorschemeDay = g:colorschemeDay
+let s:dayColorscheme = 'blue'
+if exists('g:dayColorscheme')
+    let s:dayColorscheme = g:dayColorscheme
 endif
 
 " Define the colorscheme used by night
-let s:colorschemeNight = 'darkblue'
-if exists('g:colorschemeNight')
-    let s:colorschemeNight = g:colorschemeNight
+let s:nightColorscheme = 'darkblue'
+if exists('g:nightColorscheme')
+    let s:nightColorscheme = g:nightColorscheme
 endif
 
 " Convert a time as HH:MM:SS to the number of milliseconds from
@@ -59,15 +59,11 @@ endfunction
 " a trigger for the job which will change the colorscheme
 function! ScheduleNewColorscheme(timer)
     " Define colorscheme and next time depending on time of day
-    if s:IsDayTime()
-        let newColorscheme = s:colorschemeDay
-        let targetDate = s:nightTime
-    else
-        let newColorscheme =s:colorschemeNight
-        let targetDate = s:dayTime
-    endif
+    let isDayTime       = s:IsDayTime()
+    let newColorscheme  = isDayTime ? s:dayColorscheme : s:nightColorscheme
+    let targetDate      = isDayTime ? s:nightTime : s:dayTime
 
-    " Set new colorschme
+    " Set new colorscheme
     echom 'setting colorscheme ' . newColorscheme . ' at ' . strftime('%H:%M')
     execute 'colorscheme ' . newColorscheme
 
