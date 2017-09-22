@@ -10,13 +10,13 @@ if exists('g:dayTime')
 endif
 
 " Define the hours which triggers the nightly colorscheme
-let s:nightTime = [18, 50, 50]
+let s:nightTime = [18, 30, 0]
 if exists('g:nightTime')
     let s:nightTime = g:nightTime
 endif
 
 " Define the colorscheme used by day
-let s:colorschemeDay = 'jellybeans'
+let s:colorschemeDay = 'blue'
 if exists('g:colorschemeDay')
     let s:colorschemeDay = g:colorschemeDay
 endif
@@ -32,7 +32,6 @@ endif
 function! s:ToMilliseconds(H, M, S)
     return (a:H * 3600 + a:M * 60 + a:S ) * 1000
 endfunction
-
 
 " Return the number of milliseconds beetwen two hours
 " Handles the case of a target hour the next day.
