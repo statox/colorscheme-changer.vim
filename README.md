@@ -38,9 +38,16 @@ If the command fails, this plugin will also fail.
 
 # Configuration
 
-This plugin exposes four variables that can be used to customize its behavior.
+This plugin exposes several variables that can be used to customize its behavior.
 You can define each of these variables in your `.vimrc`, if you don't the plugin
 will use default values.
+
+## Disable the plugin
+
+If you want to keep colorscheme-changer.vim install but disable it so that your
+colorscheme will not be changed you can add the following line to your `.vimrc`:
+
+    let g:colorschemeChangerLoaded = 1
 
 ## Customize hours
 
